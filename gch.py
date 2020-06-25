@@ -104,7 +104,7 @@ def pch_emitter(pch_env_key, target, source, env):
             #print '|{0}|{1}|'.format(i, h_path)
             if i == h_path:
                 if 'explain' in env.GetOption('debug'):
-                    print 'Found dep. on pch: ', source[0], ' -> ', env[pch_env_key]
+                    print ('Found dep. on pch: ', source[0], ' -> ', env[pch_env_key])
                 env.Depends(target, env[pch_env_key])
 
 
